@@ -5,15 +5,14 @@ import requests
 from io import BytesIO
 from os import environ
 
-import inky
-
-display = inky.Inky_Impressions_7
+from inky import auto
+display = auto(ask_user=True, verbose=True)
 
 backendurl = os.environ['BACKEND_URL']
 
 result = requests.get(backendurl + '/refresh')
 
 img = Image.open(BytesIO(result.content))
-display.set_image(image=img, saturation=0.5)
+display.set_image(image=img)
 
 display.show()
