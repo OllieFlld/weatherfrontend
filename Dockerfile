@@ -8,3 +8,4 @@ RUN pip install inky
 RUN pip install pillow
 RUN pip install requests
 
+CMD python script.py
