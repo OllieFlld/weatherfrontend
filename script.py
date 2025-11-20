@@ -5,8 +5,8 @@ import requests
 from io import BytesIO
 from os import environ
 
-from inky import auto
-display = auto(ask_user=True, verbose=True)
+from inky import InkyE673
+display = InkyE673(ask_user=True, verbose=True)
 
 backendurl = os.environ['BACKEND_URL']
 
