@@ -9,7 +9,7 @@ from inky import Inky_Impressions_7
 
 display = Inky_Impressions_7
 
-backendurl = os.environ('BACKEND_URL')
+backendurl = os.environ['BACKEND_URL']
 
 result = requests.get(backendurl + '/refresh')
 
